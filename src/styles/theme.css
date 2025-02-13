@@ -1,0 +1,35 @@
+:root {
+    /* Light theme (default) */
+    --bg-primary: #ffffff;
+    --bg-secondary: #f8feff;
+    --text-primary: #333333;
+    --text-secondary: #666666;
+    --accent-primary: #01BDB6;
+    --accent-secondary: #008BA7;
+    --border-color: #eeeeee;
+    --card-bg: #ffffff;
+    --card-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    --overlay-bg: rgba(255, 255, 255, 0.9);
+    --gradient-primary: linear-gradient(151.4deg, #01BDB6 -10.22%, #008BA7 82.36%);
+    --gradient-light: linear-gradient(151.4deg, rgba(1, 189, 182, 0.1) -10.22%, rgba(0, 139, 167, 0.05) 82.36%);
+}
+
+[data-theme='dark'] {
+    --bg-primary: #1a1a1a;
+    --bg-secondary: #242424;
+    --text-primary: #ffffff;
+    --text-secondary: #cccccc;
+    --accent-primary: #01BDB6;
+    --accent-secondary: #00a5c4;
+    --border-color: #333333;
+    --card-bg: #2a2a2a;
+    --card-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+    --overlay-bg: rgba(26, 26, 26, 0.9);
+    --gradient-primary: linear-gradient(151.4deg, #01BDB6 -10.22%, #00a5c4 82.36%);
+    --gradient-light: linear-gradient(151.4deg, rgba(1, 189, 182, 0.15) -10.22%, rgba(0, 165, 196, 0.1) 82.36%);
+}
+
+/* Smooth transitions */
+* {
+    transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+}

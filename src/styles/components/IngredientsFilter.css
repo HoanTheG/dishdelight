@@ -1,0 +1,206 @@
+.ingredients-filter {
+    position: relative;
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+/* Keep all ingredient filter specific styles here */
+
+.ingredients-input {
+    position: relative;
+    display: flex;
+    align-items: center;
+    margin-bottom: 1rem;
+    background: white;
+}
+
+.ingredients-input input {
+    width: 100%;
+    height: 56px;
+    padding: 0 4rem 0 3rem; /* Increased right padding for the button */
+    border: 2px solid #eee;
+    border-radius: 12px;
+    font-size: 1rem;
+    background: white;
+    transition: all 0.3s ease;
+    color: #333;
+    font-family: "Inclusive Sans", serif;
+}
+
+.ingredients-input input:focus {
+    border-color: #01BDB6;
+    outline: none;
+    box-shadow: 0 2px 12px rgba(1, 189, 182, 0.1);
+    color: #01BDB6;
+}
+
+.ingredients-input .fa-utensils {
+    position: absolute;
+    left: 1rem;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #01BDB6;
+    font-size: 1.2rem;
+    pointer-events: none;
+}
+
+.add-ingredient-btn {
+    position: absolute;
+    right: 0.8rem;
+    top: 50%;
+    transform: translateY(-50%);
+    background: white;
+    width: 38px;
+    height: 38px;
+    border: 2px solid #01BDB6;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    padding: 0; /* Reset padding */
+}
+
+.add-ingredient-btn .fa-plus {
+    color: #01BDB6;
+    font-size: 1.2rem;
+}
+
+.add-ingredient-btn:hover {
+    background: #01BDB6;
+    color: white;
+    transform: translateY(-50%) scale(1.05);
+}
+
+.add-ingredient-btn:hover .fa-plus {
+    color: white;
+}
+
+.add-ingredient-btn:active {
+    transform: translateY(-50%) scale(0.95);
+}
+
+.add-ingredient-btn:disabled {
+    background: #01BDB6;
+    opacity: 0.5;
+    border-color: transparent;
+    cursor: not-allowed;
+}
+
+.add-ingredient-btn:disabled .fa-plus {
+    color: white;
+}
+
+.add-ingredient-btn:disabled:hover {
+    transform: translateY(-50%);
+    box-shadow: none;
+}
+
+.ingredients-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    padding: 0.5rem 0;
+}
+
+.ingredient-tag {
+    background: linear-gradient(151.4deg, #01BDB6 -10.22%, #008BA7 82.36%);
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    font-size: 0.95rem;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    box-shadow: 0 2px 8px rgba(1, 189, 182, 0.2);
+    animation: fadeIn 0.3s ease;
+    margin-left: 0.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.ingredient-tag button {
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    opacity: 0.8;
+    transition: opacity 0.3s ease;
+}
+
+.ingredient-tag button:hover {
+    opacity: 1;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(5px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Mobile Responsive Styles */
+@media screen and (max-width: 480px) {
+    .ingredients-input input {
+        height: 48px;
+        font-size: 0.95rem;
+        padding: 0 1rem 0 2.8rem;
+    }
+
+    .ingredients-input i {
+        font-size: 1.1rem;
+    }
+
+    .ingredient-tag {
+        padding: 0.4rem 0.8rem;
+        font-size: 0.9rem;
+    }
+}
+
+@media screen and (max-width: 390px) {
+    .ingredients-input input {
+        height: 48px;
+        font-size: 0.9rem;
+        padding: 0 3.5rem 0 2.8rem;
+    }
+
+    .ingredients-input i {
+        font-size: 1rem;
+    }
+
+    .ingredient-tag {
+        padding: 0.4rem 0.8rem;
+        font-size: 0.85rem;
+    }
+
+    .add-ingredient-btn {
+        width: 32px;
+        height: 32px;
+        right: 0.6rem;
+        padding: 0;
+    }
+
+    .add-ingredient-btn .fa-plus {
+        font-size: 1rem;
+    }
+}
+
+/* Placeholder styling */
+.ingredients-input input::placeholder {
+    color: #01BDB6;
+    opacity: 1;
+    transition: color 0.3s ease;
+}
+
+.ingredients-input input:focus::placeholder {
+    color: #01BDB6;
+    opacity: 0.7;
+}

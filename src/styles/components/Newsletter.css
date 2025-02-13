@@ -1,0 +1,104 @@
+.newsletter {
+    padding: 3rem;
+    background: linear-gradient(151.4deg, rgba(1, 189, 182, 0.1) -10.22%, rgba(0, 139, 167, 0.05) 82.36%);
+    border-radius: 16px;
+    text-align: center;
+}
+
+.newsletter h3 {
+    font-family: "Lora", serif;
+    font-size: 1.8rem;
+    color: #333;
+    margin-bottom: 1rem;
+}
+
+.newsletter p {
+    color: #666;
+    margin-bottom: 2rem;
+}
+
+.newsletter-form {
+    max-width: 500px;
+    margin: 0 auto;
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.input-wrapper {
+    flex: 1;
+    min-width: 200px;
+    position: relative;
+}
+
+.input-wrapper i {
+    position: absolute;
+    left: 1rem;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #01BDB6;
+}
+
+.newsletter-form input {
+    width: 100%;
+    padding: 1rem 1rem 1rem 2.8rem;
+    border: 2px solid #eee;
+    border-radius: 12px;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+}
+
+.newsletter-form input:focus {
+    border-color: #01BDB6;
+    outline: none;
+    box-shadow: 0 2px 12px rgba(1, 189, 182, 0.1);
+}
+
+.subscribe-btn {
+    padding: 1rem 2.5rem 1rem 2rem; /* Adjusted padding for better icon placement */
+    background: linear-gradient(151.4deg, #01BDB6 -10.22%, #008BA7 82.36%);
+    color: white;
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.subscribe-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(1, 189, 182, 0.2);
+}
+
+.subscribe-btn i {
+    color: white; /* Added white color */
+    font-size: 0.9rem;
+    transition: transform 0.3s ease;
+    position: absolute; /* Added positioning */
+    right: 1.5rem; /* Position from right */
+    top: 50%; /* Center vertically */
+    transform: translateY(-50%); /* Center vertically */
+}
+
+.subscribe-btn:hover i {
+    transform: translate(3px, -50%); /* Keep vertical centering while moving horizontally */
+}
+
+@media screen and (max-width: 768px) {
+    .newsletter {
+        padding: 2rem;
+    }
+
+    .newsletter-form {
+        flex-direction: column;
+    }
+
+    .subscribe-btn {
+        width: 100%;
+        justify-content: center;
+    }
+}

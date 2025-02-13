@@ -1,0 +1,94 @@
+.cookie-consent {
+    position: fixed;
+    bottom: 2rem;
+    left: 50%;
+    transform: translateX(-50%);
+    background: white;
+    padding: 1.5rem;
+    border-radius: 16px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+    max-width: 500px;
+    width: 90%;
+    z-index: 1000; /* Update z-index to be higher than grid but lower than navbar */
+    animation: slideUp 0.5s ease forwards;
+}
+
+.cookie-content {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    flex: 1;
+}
+
+.cookie-icon {
+    font-size: 1.5rem;
+    color: #01BDB6;
+}
+
+.cookie-content p {
+    font-size: 0.9rem;
+    color: #666;
+    margin: 0;
+}
+
+.cookie-actions {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+}
+
+.accept-button {
+    background: linear-gradient(151.4deg, #01BDB6 -10.22%, #008BA7 82.36%);
+    color: white;
+    border: none;
+    padding: 0.8rem 1.5rem;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.accept-button:hover {
+    transform: translateY(-2px);
+}
+
+.learn-more {
+    color: #666;
+    text-decoration: none;
+    font-size: 0.9rem;
+}
+
+.learn-more:hover {
+    color: #01BDB6;
+}
+
+@keyframes slideUp {
+    from {
+        opacity: 0;
+        transform: translate(-50%, 20px);
+    }
+    to {
+        opacity: 1;
+        transform: translate(-50%, 0);
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .cookie-consent {
+        flex-direction: column;
+        gap: 1rem;
+        bottom: 1rem;
+        text-align: center;
+    }
+
+    .cookie-content {
+        flex-direction: column;
+    }
+
+    .cookie-actions {
+        width: 100%;
+        justify-content: center;
+    }
+}
